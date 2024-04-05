@@ -70,5 +70,6 @@ public interface NodeInterface extends Remote {
 	public void onMutexAcknowledgementReceived(Message message) throws RemoteException;
 	
 	public void onMutexRequestReceived(Message message) throws RemoteException;
-	
+
+	public void updateFingerTable(int index, NodeInterface node) throws RemoteException;
 }

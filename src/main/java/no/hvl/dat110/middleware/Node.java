@@ -215,7 +215,12 @@ public class Node extends UnicastRemoteObject implements NodeInterface {
 		
 		mutex.onMutexRequestReceived(message);	
 	}
-	
+
+	@Override
+	public void updateFingerTable(int index, NodeInterface node) throws RemoteException {
+		fingerTable.set(index, node);
+	}
+
 	@Override
 	public void multicastReleaseLocks(Set<Message> activenodes) throws RemoteException {
 		
